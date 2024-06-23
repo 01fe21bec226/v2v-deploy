@@ -1,0 +1,10 @@
+Sent Node 1's certificate: 0.0005562305450439453 seconds
+Received Node 2's certificate: 0.0019805431365966797 seconds
+Deserialized Node 2's certificate: 0.0003528594970703125 seconds
+Verified Node 2's certificate: 0.0002846717834472656 seconds
+Generated and sent DH public key: 0.0014450550079345703 seconds
+Received and deserialized Node 2's DH public key and signature: 0.0025200843811035156 seconds
+Set DH peer public key: 0.0007894039154052734 seconds
+Calculated symmetric key: 0.00015211105346679688 seconds
+Encrypted and sent message: 0.0004017353057861328 seconds
+Verified acknowledgment signature: 0.002068758010864258 seconds
