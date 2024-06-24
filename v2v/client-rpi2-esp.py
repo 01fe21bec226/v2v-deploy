@@ -35,9 +35,14 @@ def send_message(ser, message):
     ser.write((json.dumps(message) + '\n').encode('utf-8'))
 
 def receive_message(ser):
-    data = ser.readline().decode('utf-8').strip()
-    print("Received data:", data)
-    return json.loads(data)
+    while True:
+        try:
+            data = ser.readline().decode('utf-8').strip()
+            if data:  # Ensure data is not empty
+                print("Received data:", data)
+                return json.loads(data)
+        except json.JSONDecodeError:
+            print("Failed to decode JSON, retrying...")
 
 def main():
     report = []
