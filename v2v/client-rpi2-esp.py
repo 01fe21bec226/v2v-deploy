@@ -32,7 +32,7 @@ def deserialize_ec_public_key(hex_data):
     return public_key
 
 def send_message(ser, message):
-    ser.write(json.dumps(message).encode('utf-8'))
+    ser.write((json.dumps(message) + '\n').encode('utf-8'))
 
 def receive_message(ser):
     data = ser.readline().decode('utf-8').strip()
